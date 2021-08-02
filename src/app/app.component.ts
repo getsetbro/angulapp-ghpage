@@ -8,7 +8,7 @@ import { HostBinding, ViewEncapsulation, Component } from '@angular/core';
 })
 export class AppComponent {
   @HostBinding('class')
-  classAttribute: string = 'content-between grid min-h-screen';
+  classAttribute: string = 'grid min-h-screen';
 
   title = 'myapp-angular';
 }

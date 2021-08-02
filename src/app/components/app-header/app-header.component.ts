@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-header.component.css'],
 })
 export class AppHeaderComponent implements OnInit {
+  @HostBinding('class')
+  classAttribute: string = 'app-header sticky top-0';
+
   constructor() {}
 
   ngOnInit(): void {}
