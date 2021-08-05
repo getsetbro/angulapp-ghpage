@@ -9,12 +9,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SearchFormComponent } from './components/search-form/search-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ResultsComponent } from './components/results/results.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
-  { path: '', redirectTo: '/about', pathMatch: 'full' },
+  { path: 'results', component: ResultsComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -24,9 +27,11 @@ const routes: Routes = [
     AboutComponent,
     AppHeaderComponent,
     FooterComponent,
+    SearchFormComponent,
+    ResultsComponent,
   ],
   // imports: [BrowserModule,AppRoutingModule],
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, RouterModule.forRoot(routes), ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
